@@ -1,0 +1,20 @@
+* Business functionality: Calculator
+
+* High level architecture:
+	HTTP Request -----> (Facade API) ------> (Calculator API)
+
+* Framework:
+	- Spring Webflux
+	- SLF4J
+	- Jaeger Tracing
+
+* Tasks:
+	- Extract TransactionID from Header and add on SLF4J MDC - To log transactionID on logger calls
+		- See Reactor Hooks
+		- See Webflux WebFilter
+	- Add tracing between API calls
+
+* Future:
+	- Change HTTP sync calls between services to Kafka messages
+
+
