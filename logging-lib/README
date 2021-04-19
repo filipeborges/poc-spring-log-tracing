@@ -1,0 +1,10 @@
+Usage
+-----
+
+1- Add the following property on 'application.properties':
+
+	logging.pattern.level=[%X{transactionId}] %5p
+
+2- Add the following arg to '@SpringApplication':
+
+	@SpringApplication(scanBasePackages={"br.com.filipeborges.poc.spring.log_tracing.log", <application-base-package>})
