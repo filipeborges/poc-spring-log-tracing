@@ -1,10 +1,21 @@
 Usage
 -----
 
-1- Add the following property on 'application.properties':
+# Publish lib to local maven cache repository
 
-	logging.pattern.level=[%X{transactionId}] %5p
+- gradlew publishToMavenLocal
 
-2- Add the following arg to '@SpringApplication':
 
-	@SpringApplication(scanBasePackages={"br.com.filipeborges.poc.spring.log_tracing.log", <application-base-package>})
+# How to consume lib
+
+1- Add dependency:
+
+    implementation 'br.com.filipeborges.poc.spring.log_tracing.log:custom-log-webflux:1.0.0-SNAPSHOT'
+
+2- Add the following property on 'application.properties':
+
+    logging.pattern.level=[%X{transactionId}] %5p
+
+3- Add the following arg to '@SpringApplication':
+
+    @SpringApplication(scanBasePackages={"br.com.filipeborges.poc.spring.log_tracing.log", <application-base-package>})
