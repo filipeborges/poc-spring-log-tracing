@@ -9,9 +9,11 @@
 	- Jaeger Tracing
 
 * Tasks:
-	- Extract TransactionID from Header and add on SLF4J MDC - To log transactionID on logger calls
+	- Extract TransactionID from Header and add on SLF4J MDC - To log transactionID on logger calls - OK
 		- See Reactor Hooks
 		- See Webflux WebFilter
+	- Create lib with logging transaction id - OK
+	- Create lib to add Jaeger tracing
 	- Add tracing between API calls
 
 * Future:
